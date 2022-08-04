@@ -27,6 +27,9 @@ public class BalancedBrackets {
             if (ch == '[') {
                 brackets++;
             } else if (ch == ']') {
+                if (brackets <= 0){
+                    return false;
+                }
                 brackets--;
             }
         }
